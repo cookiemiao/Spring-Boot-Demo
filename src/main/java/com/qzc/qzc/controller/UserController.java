@@ -23,9 +23,11 @@ public class UserController {
         logger.info("根据id取得user");
         try {
             user = userService.getUser(user);
+            int a = 1 / 0;
             return user;
         } catch (Exception e) {
-            logger.error("取得user失败！",e);
+            logger.error("取得user失败！");
+//            e.printStackTrace();
             return null;
         }
     }
